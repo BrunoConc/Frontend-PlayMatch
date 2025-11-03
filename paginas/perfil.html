@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlayMatch - Perfil</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- barra de navegação -->
+    <aside class="sidebar">
+        <h1 class="logo">PlayMatch</h1>
+        <nav>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Início</a>
+                </li>
+                <li class="nav-item">
+                    <a href="minhas-partidas.html" class="nav-link">Minhas Partidas</a>
+                </li>
+                <li class="nav-item">
+                    <a href="perfil.html" class="nav-link">Perfil</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Sair</a>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+   
+        <h2 class="page-title">Perfil</h2>
+
+        <div class="profile-container">
+          
+            <div class="profile-form">
+              
+                <div class="form-group">
+                    <label for="name" class="form-label">Nome</label>
+                    <input type="text" id="name" class="form-input" placeholder="Ex: João Pedro">
+                </div>
+
+                <div class="form-group">
+                    <label for="email" class="form-label">E-mail</label>
+                    <input type="email" id="email" class="form-input" placeholder="Ex: joaopedro@gmail.com">
+                </div>
+
+                <button class="btn-edit">Editar Perfil</button>
+
+                <div class="form-group">
+                    <label for="matches" class="form-label">Partidas jogadas</label>
+                    <input type="text" id="matches" class="form-input" value="0" readonly>
+                </div>
+            </div>
+
+            <div class="profile-info">
+                <!-- Avatar -->
+                <div class="avatar">
+                    <svg class="avatar-icon" viewBox="0 0 24 24" fill="none">
+                        <circle cx="12" cy="8" r="4" fill="white"/>
+                        <path d="M4 20c0-4 3.5-7 8-7s8 3 8 7" fill="white"/>
+                    </svg>
+                </div>
+
+                <div class="rating">
+                    <span class="star">⭐</span>
+                    <span class="star">⭐</span>
+                    <span class="star">⭐</span>
+                    <span class="star">⭐</span>
+                    <span class="star">⭐</span>
+                </div>
+            </div>
+        </div>
+
+        <button class="btn-delete">Excluir conta</button>
+    </main>
+</body>
+</html>
