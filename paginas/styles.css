@@ -978,3 +978,113 @@
         font-size: 20px;
     }
 }
+/* Estilo da pagina de Cadastro */
+
+/* O body principal já tem a cor de fundo #d9d9d9.
+  Se esta página for a única com esse fundo, 
+  podemos criar uma classe específica.
+*/
+.body-signup {
+    background-color: #d9d9d9;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: block; /* Sobrescreve o 'display: flex' do body normal */
+    height: auto;
+    overflow: auto;
+}
+
+.signup-header {
+    background-color: #1a2744; /* Cor da sua sidebar */
+    padding: 20px 0;
+}
+
+.logo-signup {
+    font-size: 42px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    margin: 0;
+}
+
+.signup-container {
+    max-width: 550px;
+    margin: 50px auto; /* Centraliza o container */
+    padding: 20px;
+}
+
+.signup-title {
+    font-size: 48px;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 40px;
+    text-align: left;
+}
+
+.signup-form {
+    width: 100%;
+}
+
+.signup-form-group {
+    margin-bottom: 30px;
+}
+
+.signup-label {
+    display: block;
+    font-size: 24px;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 12px;
+}
+
+.signup-input {
+    width: 100%;
+    padding: 25px 30px;
+    font-size: 22px;
+    border: none;
+    border-radius: 12px;
+    background-color: white;
+    color: #333;
+}
+
+.btn-signup {
+    background-color: #6ec06e; /* Cor do .btn-primary */
+    color: white;
+    border: none;
+    padding: 30px 60px;
+    font-size: 32px;
+    font-weight: 600;
+    border-radius: 12px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 20px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-signup:hover {
+    background-color: #5da85d;
+    transform: translateY(-2px);
+}
+
+/* Responsividade para Cadastro */
+@media (max-width: 768px) {
+    .signup-container {
+        padding: 10px 20px;
+        margin: 30px auto;
+    }
+    .logo-signup {
+        font-size: 32px;
+    }
+    .signup-title {
+        font-size: 36px;
+    }
+    .signup-label {
+        font-size: 20px;
+    }
+    .signup-input {
+        padding: 20px 25px;
+        font-size: 18px;
+    }
+    .btn-signup {
+        padding: 22px 40px;
+        font-size: 26px;
+    }
+}
