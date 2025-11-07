@@ -638,3 +638,215 @@
         max-height: 400px;
     }
 }
+/* Estilo da pagina Detalhes da Partida */
+
+.match-detail-header {
+    background-color: #1a2744; /* Cor do sidebar */
+    color: white;
+    font-size: 28px;
+    font-weight: 600;
+    padding: 15px 40px;
+    border-radius: 50px; /* Formato de pílula */
+    text-align: center;
+    margin-bottom: 30px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.match-detail-datetime {
+    font-size: 25px;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.match-detail-info-container {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 50px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    flex-wrap: wrap; /* Adiciona quebra de linha em telas menores */
+}
+
+.match-detail-map {
+    flex: 1;
+    min-width: 300px; /* Garante que o mapa não fique muito pequeno */
+}
+
+.match-detail-map img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    display: block;
+}
+
+.match-detail-meta {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    justify-content: center;
+    min-width: 300px;
+}
+
+.meta-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.meta-item .meta-icon-wrapper {
+    width: 50px;
+    height: 50px;
+    background-color: #f0f0f0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0; /* Impede que o ícone encolha */
+}
+
+.meta-item .meta-icon-svg {
+    width: 28px;
+    height: 28px;
+    stroke: #333;
+    fill: none;
+}
+
+.meta-item .meta-icon-avatar {
+   width: 50px;
+   height: 50px;
+   background-color: #d9d9d9; /* Cinza placeholder */
+   border-radius: 50%;
+   flex-shrink: 0;
+}
+
+.meta-item strong {
+    font-size: 20px;
+    color: #000;
+    display: block;
+    line-height: 1.2;
+}
+
+.meta-item p {
+    font-size: 18px;
+    color: #666;
+    margin-top: 2px;
+}
+
+/* Seções de Descrição e Participantes */
+.match-detail-section {
+    margin-bottom: 40px;
+}
+
+.match-detail-section h3 {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #000;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.match-detail-section p {
+    font-size: 18px;
+    color: #333;
+    line-height: 1.6;
+}
+
+.participant-list {
+    display: grid;
+    /* Cria colunas responsivas: no mínimo 100px, mas se ajustam para preencher o espaço */
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 25px;
+}
+
+.participant-item {
+    text-align: center;
+}
+
+.participant-avatar {
+    width: 90px;
+    height: 90px;
+    background-color: #d9d9d9;
+    border-radius: 50%;
+    margin: 0 auto 10px;
+}
+
+.participant-item p {
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+}
+
+/* Botão Confirmar Presença */
+.btn-confirm-presence {
+    background-color: #6ec06e; /* Verde do .btn-primary */
+    color: white;
+    border: none;
+    padding: 30px 60px;
+    font-size: 32px;
+    font-weight: 600;
+    border-radius: 12px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 730px;
+    margin: 20px auto 0;
+    display: block; /* Permite centralizar com margin auto */
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-confirm-presence:hover {
+    background-color: #5da85d;
+    transform: translateY(-2px);
+}
+
+/* Ajustes responsivos para a nova página */
+@media (max-width: 1024px) {
+    .match-detail-header {
+        font-size: 24px;
+    }
+    .match-detail-datetime {
+        font-size: 36px;
+    }
+    .match-detail-section h3 {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 768px) {
+    .match-detail-header {
+        font-size: 20px;
+        padding: 12px 25px;
+    }
+    .match-detail-datetime {
+        font-size: 28px;
+    }
+    .match-detail-info-container {
+        flex-direction: column; /* Empilha o mapa e os detalhes */
+    }
+    .match-detail-section h3 {
+        font-size: 24px;
+    }
+    .btn-confirm-presence {
+        font-size: 24px;
+        padding: 20px 40px;
+    }
+    .participant-avatar {
+        width: 70px;
+        height: 70px;
+    }
+}
+
+/* Garante que links estilizados como botões funcionem bem na página detalhes-partidas */
+.btn-participate,
+.btn-participate-outline {
+    text-decoration: none;
+    text-align: center;
+}
