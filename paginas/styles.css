@@ -850,3 +850,130 @@
     text-decoration: none;
     text-align: center;
 }
+
+/* Estilo da pagina de Avaliações */
+
+.rating-summary-card {
+    background-color: white;
+    border-radius: 12px;
+    padding: 30px 40px;
+    text-align: center;
+    max-width: 500px;
+    margin: 0 auto 50px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.rating-summary-card h3 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.rating-summary-card h2 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.rating-summary-card .stars {
+    font-size: 30px;
+    margin-bottom: 15px;
+    line-height: 1; /* Alinha melhor os emojis */
+}
+
+.rating-summary-card .subtitle {
+    font-size: 18px;
+    color: #666;
+}
+
+.ratings-columns-container {
+    display: flex;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.ratings-column {
+    flex: 1; /* Faz as colunas dividirem o espaço */
+    min-width: 0; /* Corrige bug de overflow do flexbox */
+}
+
+.ratings-section-title {
+    font-size: 32px;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 20px;
+}
+
+/* Reutilizando .matches-list-container */
+/* (já está no seu CSS) */
+
+.review-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 15px;
+}
+
+.review-card:last-child {
+    margin-bottom: 0;
+}
+
+.review-card p {
+    font-size: 18px;
+    color: #333;
+    line-height: 1.5;
+}
+
+.review-card .stars-inline {
+    font-size: 18px;
+    color: #FFD700; /* Cor de estrela, mas o emoji já funciona */
+}
+
+.review-card .comment {
+    font-style: italic;
+    color: #555;
+    margin-top: 10px;
+}
+
+/* Ajuste para o card de 'Avaliar Jogadores' */
+/* (reutilizando .match-item) */
+.match-item-title-small {
+    font-size: 24px; /* Um pouco menor que o título da partida */
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+/* Reutilizando .btn-participate-outline */
+/* (já está no seu CSS) */
+
+
+/* Responsividade para a nova página */
+@media (max-width: 1024px) {
+    .ratings-columns-container {
+        flex-direction: column; /* Empilha as colunas */
+        gap: 50px;
+    }
+    .ratings-section-title {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 768px) {
+    .rating-summary-card h2 {
+        font-size: 28px;
+    }
+    .rating-summary-card h3 {
+        font-size: 20px;
+    }
+    .ratings-section-title {
+        font-size: 24px;
+    }
+    .match-item-title-small {
+        font-size: 20px;
+    }
+}
