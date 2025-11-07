@@ -980,10 +980,6 @@
 }
 /* Estilo da pagina de Cadastro */
 
-/* O body principal já tem a cor de fundo #d9d9d9.
-  Se esta página for a única com esse fundo, 
-  podemos criar uma classe específica.
-*/
 .body-signup {
     background-color: #d9d9d9;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -1087,4 +1083,22 @@
         padding: 22px 40px;
         font-size: 26px;
     }
+}
+/* Link para 'Cadastre-se' na página de Login */
+.signup-link {
+    font-size: 18px;
+    font-weight: 500;
+    color: #333;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.signup-link a {
+    color: #1a2744; /* Azul escuro do header/sidebar */
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
 }
